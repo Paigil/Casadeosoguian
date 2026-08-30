@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Pai Gil D'Oxaguiã — Tradição, fé, sabedoria e equilíbrio.">
-<title>Início | Pai Gil D'Oxaguiã</title>
+<meta name="description" content="Jogo de búzios e cartas com Pai Gil D'Oxaguiã.">
+<title>Jogos | Pai Gil D'Oxaguiã</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
@@ -156,15 +156,15 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.06);pa
 </style>
 </head>
 <body>
-<header class="nav">
+<header class="nav solid">
   <a class="brand" href="index.html">
     <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 2v44M9 14h22M14 20h12" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="8" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
     <span class="brand-text"><span class="l1">PAI GIL</span><span class="l2">DE OXAGUIÃ</span></span>
   </a>
   <nav class="navlinks" aria-label="Navegação principal">
-    <a href="index.html" class="active">Início</a>
+    <a href="index.html">Início</a>
     <div class="has-drop">
-      <a href="jogos.html">Jogos <span class="chev">▾</span></a>
+      <a href="jogos.html" class="active">Jogos <span class="chev">▾</span></a>
       <div class="dropdown">
         <a href="jogos.html#buzios">Jogo de Búzios</a>
         <a href="jogos.html#cartas">Cartas</a>
@@ -180,26 +180,32 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.06);pa
   <svg class="compass" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" stroke="currentColor" stroke-width="1.3"/></svg>
 </header>
 <main>
-  <section class="hero">
-    <div class="hero-photo"><img src="paigil_hero.jpg" alt="Pai Gil D'Oxaguiã em vestes cerimoniais douradas"></div>
-    <div class="hero-inner">
-      <div class="hero-mark"><svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 2v44M9 14h22M14 20h12" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="8" r="3" stroke="currentColor" stroke-width="1.6"/></svg></div>
-      <h1><span class="l1">Pai Gil</span><span class="l2">de Oxaguiã</span></h1>
-      <div class="hero-rule"><svg viewBox="0 0 9 9"><rect width="9" height="9" transform="rotate(45 4.5 4.5)" fill="currentColor"/></svg></div>
-      <p class="hero-tag">Venha <em>respirar</em><br>o conhecimento ancestral.</p>
-      <div class="pillars">
-        <div class="pillar"><a href="jogos.html"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="3" width="10" height="16" rx="1.2" transform="rotate(-8 4 3)" stroke="currentColor" stroke-width="1.3"/><rect x="12" y="4" width="10" height="16" rx="1.2" transform="rotate(8 12 4)" stroke="currentColor" stroke-width="1.3"/></svg><span>Jogos</span></a></div>
-        <div class="pillar"><a href="cursos.html"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 5.5c3-1.5 6-1.5 8 0v13c-2-1.5-5-1.5-8 0v-13z" stroke="currentColor" stroke-width="1.3"/><path d="M20 5.5c-3-1.5-6-1.5-8 0v13c2-1.5 5-1.5 8 0v-13z" stroke="currentColor" stroke-width="1.3"/></svg><span>Cursos</span></a></div>
-        <div class="pillar"><a href="orientacao.html"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" stroke="currentColor" stroke-width="1.2"/></svg><span>Orientação<br>Espiritual</span></a></div>
+  <section class="banner">
+    <div class="wrap">
+      <span class="eyebrow">Jogos</span>
+      <h1>Consultas através dos jogos.</h1>
+      <p class="sub">Formas tradicionais de orientação, usadas para compreender caminhos e responder às questões de quem procura a casa.</p>
+    </div>
+  </section>
+  <section class="section cards">
+    <div class="wrap">
+      <div class="cards-grid two">
+        <article class="card" id="buzios">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="3" width="10" height="16" rx="1.2" transform="rotate(-8 4 3)" stroke="currentColor" stroke-width="1.3"/><rect x="12" y="4" width="10" height="16" rx="1.2" transform="rotate(8 12 4)" stroke="currentColor" stroke-width="1.3"/></svg>
+          <h3>Jogo de Búzios</h3>
+          <p>Consulta através dos búzios para orientação e compreensão dos caminhos.</p>
+        </article>
+        <article class="card" id="cartas">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="3" width="14" height="18" rx="1.5" stroke="currentColor" stroke-width="1.3"/><path d="M9 8h6M9 12h6M9 16h3" stroke="currentColor" stroke-width="1.1"/></svg>
+          <h3>Cartas</h3>
+          <p>Leitura e orientação de acordo com os fundamentos do atendimento de Pai Gil.</p>
+        </article>
+      </div>
+      <div class="cta-row">
+        <a class="btn solid" href="atendimento.html">Agendar consulta</a>
       </div>
     </div>
   </section>
-  <div class="torn">
-    <svg viewBox="0 0 1440 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M0,20 L40,26 L85,14 L130,28 L175,10 L220,24 L270,16 L315,30 L360,12 L410,26 L455,18 L500,32 L545,14 L595,28 L640,16 L685,24 L730,10 L780,26 L825,18 L870,30 L915,14 L965,28 L1010,16 L1055,24 L1100,12 L1150,28 L1195,18 L1240,30 L1285,14 L1335,26 L1380,18 L1440,24 L1440,64 L0,64 Z" fill="#f2ede1"/>
-    </svg>
-  </div>
-  <div class="strip"><p>Tradição • Fé • Sabedoria • Equilíbrio</p></div>
 
 </main>
 <footer>

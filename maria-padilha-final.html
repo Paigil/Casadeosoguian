@@ -96,8 +96,11 @@ img{display:block;max-width:100%}
 
 footer{background:var(--bg);border-top:1px solid var(--line);padding:2rem 5vw;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-dim)}
 
+.menu-btn{display:none;background:none;border:none;color:var(--ivory);font-size:1.6rem;line-height:1;cursor:pointer;padding:.2rem .3rem;position:relative;z-index:36}
 @media(max-width:860px){
-  .navlinks{display:none}
+  .menu-btn{display:block}
+  .navlinks{display:none;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background:rgba(8,7,8,.98);flex-direction:column;align-items:center;justify-content:center;gap:2rem;font-size:1.1rem;z-index:35}
+  .navlinks.open{display:flex}
   .origem-grid,.casa-grid{grid-template-columns:1fr}
   .origem-side,.casa-head{position:static;margin-bottom:2rem}
   .values-grid{grid-template-columns:repeat(2,1fr)}
@@ -116,6 +119,7 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:2rem 5vw;di
     <a href="quem.html">Quem sou</a>
     <a href="atendimento.html">Atendimento</a>
   </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">&#9776;</button>
 </header>
 
 <main>
@@ -193,5 +197,22 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:2rem 5vw;di
   <span>Tradição • Fé • Sabedoria • Equilíbrio</span>
 </footer>
 
+<script>
+function toggleMenu(){
+  var nav = document.querySelector('.navlinks');
+  var btn = document.getElementById('menuBtn');
+  var isOpen = nav.classList.toggle('open');
+  btn.innerHTML = isOpen ? '&#10005;' : '&#9776;';
+  btn.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+document.querySelectorAll('.navlinks a').forEach(function(a){
+  a.addEventListener('click', function(){
+    document.querySelector('.navlinks').classList.remove('open');
+    document.getElementById('menuBtn').innerHTML = '&#9776;';
+    document.body.style.overflow = '';
+  });
+});
+</script>
 </body>
 </html>
