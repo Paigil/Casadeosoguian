@@ -7,37 +7,191 @@
 <title>Maria Padilha | Pai Gil D'Oxaguiã</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#070606;--bg2:#0d0909;--wine:#41090f;--red:#b51625;--red2:#d12a38;--gold:#b89559;--gold2:#d2b77e;--ivory:#f1e8dc;--smoke:#cfc4b6;--muted:#958a7e}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ivory);font-family:'EB Garamond',serif;-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}
-.nav{position:absolute;z-index:20;top:0;left:0;right:0;height:82px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;border-bottom:1px solid rgba(255,255,255,.07);background:linear-gradient(180deg,rgba(0,0,0,.75),transparent)}
-.brand{font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.15em;line-height:1.25}.brand strong{display:block;font-size:1.07rem;font-weight:500;letter-spacing:.08em}.navlinks{display:flex;gap:2.1rem;font:500 .63rem/1 'Cinzel',serif;letter-spacing:.14em;text-transform:uppercase}.navlinks a{opacity:.86}.navlinks a:hover{color:var(--gold2);opacity:1}
-.hero{position:relative;min-height:100svh;overflow:hidden;background:#000;display:flex;align-items:flex-end}.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:66% center}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,3,3,.98) 0%,rgba(4,3,3,.90) 21%,rgba(4,3,3,.56) 45%,rgba(4,3,3,.11) 70%,rgba(4,3,3,.32) 100%),linear-gradient(0deg,rgba(5,4,4,.9),transparent 45%)}
-.hero-inner{position:relative;z-index:2;width:min(720px,88vw);margin:0 0 10vh 6vw}.eyebrow{font:500 .68rem/1.2 'Cinzel',serif;letter-spacing:.40em;text-transform:uppercase;color:var(--gold2)}.hero h1{font:400 clamp(5rem,10.5vw,9.5rem)/.76 'Alex Brush',cursive;margin:.7rem 0;color:var(--red2);text-shadow:0 10px 35px rgba(0,0,0,.55)}.rule{width:min(420px,76vw);height:1px;margin:1.4rem 0;background:linear-gradient(90deg,transparent,var(--gold),transparent)}.hero-tag{font:500 .88rem/1.5 'Cinzel',serif;letter-spacing:.28em;text-transform:uppercase;margin:0 0 1rem}.hero-quote{max-width:35ch;margin:0;color:#d7ccbf;font-size:1.35rem;font-style:italic;line-height:1.5}
-.section{position:relative;padding:8.5rem 6vw}.wrap{width:min(1180px,100%);margin:0 auto}.section h2{font:500 clamp(2.3rem,4.4vw,4.4rem)/1.08 'Cinzel',serif;letter-spacing:.025em;margin:.9rem 0 2rem}.lead{font-size:clamp(1.3rem,2vw,1.62rem);line-height:1.62;color:#e0d5c7}p{font-size:1.16rem;line-height:1.9;color:var(--smoke)}
-.quem{background:radial-gradient(circle at 80% 20%,rgba(181,22,37,.11),transparent 34%),linear-gradient(180deg,#080707,#100b0b)}.quem-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:7vw;align-items:center}.frame{min-height:520px;border:1px solid rgba(184,149,89,.22);position:relative;overflow:hidden;background:#090707}.frame:before,.frame:after{content:"";position:absolute;inset:20px;border:1px solid rgba(184,149,89,.17)}.frame:after{inset:40px;border-color:rgba(181,22,37,.14)}.frame img{width:100%;height:100%;position:absolute;inset:0;object-fit:cover;object-position:68% center;filter:saturate(.82) brightness(.62) contrast(1.06)}.frame-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.70))}.frame-mark{position:absolute;left:0;right:0;bottom:2.8rem;text-align:center;font:400 5.4rem/1 'Alex Brush',cursive;color:var(--red2);text-shadow:0 5px 30px rgba(0,0,0,.6)}.frame-small{position:absolute;left:0;right:0;bottom:1.6rem;text-align:center;font:500 .58rem/1 'Cinzel',serif;letter-spacing:.28em;text-transform:uppercase;color:var(--gold2)}
-.impact{min-height:65vh;display:grid;place-items:center;text-align:center;background:linear-gradient(rgba(7,5,5,.82),rgba(7,5,5,.9)),url('padilha_hero.jpg') center 35%/cover fixed;border-block:1px solid rgba(184,149,89,.12)}.impact-inner{padding:7rem 6vw;max-width:1050px}.impact .tiny{font:500 .64rem/1 'Cinzel',serif;letter-spacing:.42em;text-transform:uppercase;color:var(--gold2)}blockquote{margin:1.4rem 0 0;font:500 clamp(2.8rem,6vw,6rem)/1.1 'Cinzel',serif;color:#f2e8da;text-shadow:0 10px 35px #000}blockquote span{color:var(--red2)}
-.casa{background:radial-gradient(ellipse at 0 50%,rgba(129,13,25,.18),transparent 42%),linear-gradient(180deg,#0d0909,#17090b 55%,#0b0708)}.casa-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:7vw;align-items:start}.sticky{position:sticky;top:3rem}.sticky h2 span{display:block;font:400 1.45em/.8 'Alex Brush',cursive;color:var(--red2);margin-top:.25rem}.copy p:first-child:first-letter{float:left;font:500 4.2rem/.8 'Cinzel',serif;color:var(--gold2);padding:.18rem .6rem 0 0}.pull{margin:3rem 0;padding:2rem 0;border-block:1px solid rgba(184,149,89,.28);font-size:1.52rem;font-style:italic;line-height:1.55;color:#eee3d4}.signature{margin-top:4rem;font:400 4rem/1 'Alex Brush',cursive;color:var(--red2)}.sigsub{margin-top:.8rem;font:500 .65rem/1 'Cinzel',serif;letter-spacing:.32em;text-transform:uppercase;color:var(--gold2)}
-.values{background:#090707}.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(184,149,89,.15);border:1px solid rgba(184,149,89,.15)}.value{background:#0c0909;padding:2.2rem 1.7rem;min-height:180px}.num{font:400 2.8rem/1 'Alex Brush',cursive;color:var(--red2)}.value h3{font:500 .85rem/1.4 'Cinzel',serif;letter-spacing:.16em;text-transform:uppercase;color:var(--gold2);margin:1rem 0 .8rem}.value p{font-size:1rem;line-height:1.6;margin:0;color:#bfb3a7}
-.final{position:relative;min-height:62vh;display:grid;place-items:center;text-align:center;overflow:hidden;background:#060505}.final:before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;background:radial-gradient(circle,rgba(130,12,23,.27),transparent 68%)}.final-inner{position:relative;z-index:2;padding:7rem 5vw}.orn{color:var(--gold);letter-spacing:.55em;margin-bottom:1.4rem}.final h3{font:400 clamp(4.5rem,9vw,8.4rem)/.84 'Alex Brush',cursive;color:var(--red2);margin:0}.final p{font:500 .76rem/1.4 'Cinzel',serif;letter-spacing:.30em;text-transform:uppercase;color:var(--gold2);margin-top:1.8rem}.footer{padding:2rem 5vw;border-top:1px solid rgba(255,255,255,.06);display:flex;justify-content:space-between;gap:2rem;background:#060505;font:500 .56rem/1.4 'Cinzel',serif;letter-spacing:.18em;text-transform:uppercase;color:#756c64}
-@media(max-width:900px){.navlinks{display:none}.nav{height:68px}.hero img{object-position:70% center}.hero:after{background:linear-gradient(0deg,rgba(4,3,3,.98) 0%,rgba(4,3,3,.82) 44%,rgba(4,3,3,.24) 74%),linear-gradient(90deg,rgba(4,3,3,.45),rgba(4,3,3,.06))}.hero-inner{margin:0 7vw 6.5rem;width:86vw}.quem-grid,.casa-grid{grid-template-columns:1fr}.sticky{position:static}.section{padding:6rem 7vw}.frame{min-height:430px}.impact{background-attachment:scroll}.values-grid{grid-template-columns:1fr 1fr}.footer{flex-direction:column;align-items:center;text-align:center}}
-@media(max-width:560px){.hero h1{font-size:clamp(4.8rem,20vw,7rem)}.hero-tag{font-size:.72rem;letter-spacing:.18em}.hero-quote{font-size:1.1rem}.section{padding:5rem 7vw}.frame{min-height:360px}.values-grid{grid-template-columns:1fr}.signature{font-size:3.2rem}}
+:root{
+  --bg:#0a0a0c;
+  --bg2:#151317;
+  --bg3:#1c1a1e;
+  --red:#e4223a;
+  --red-deep:#2b070d;
+  --red-mid:#5c0f1a;
+  --ivory:#f4f1ea;
+  --grey:#a5a3a0;
+  --grey-dim:#68666a;
+  --line:rgba(255,255,255,.12)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ivory);font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+
+.label{font-family:'Inter',sans-serif;font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--red)}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:76px;background:linear-gradient(180deg,rgba(10,10,12,.9),transparent);}
+.brand{font-family:'Fraunces',serif;font-size:1rem;font-weight:600;letter-spacing:.02em}
+.navlinks{display:flex;gap:2.2rem;font-size:.7rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.navlinks a:hover{color:var(--ivory)}
+
+/* ---------- HERO (photo used once, here only) ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;overflow:hidden;background:#000}
+.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 18%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,7,8,.15) 0%,rgba(8,7,8,.35) 45%,rgba(8,7,8,.96) 96%),linear-gradient(90deg,rgba(8,7,8,.85) 0%,rgba(8,7,8,.15) 42%,transparent 65%)}
+.hero-inner{position:relative;z-index:2;padding:0 5vw 5rem;width:100%}
+.hero-inner .label{display:block;margin-bottom:1.2rem}
+.hero h1{font-family:'Fraunces',serif;font-weight:600;font-style:italic;line-height:.92;margin:0;font-size:clamp(3.4rem,9.5vw,8rem);color:var(--ivory)}
+.hero-foot{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1.5rem;margin-top:2rem;max-width:1200px}
+.hero-quote{font-size:clamp(1.05rem,1.6vw,1.3rem);color:var(--grey);max-width:34ch;line-height:1.5}
+.hero-num{font-family:'Fraunces',serif;font-size:.8rem;color:var(--grey-dim);letter-spacing:.05em}
+
+/* ---------- SECTION SHELL ---------- */
+.section{position:relative;padding:7rem 5vw}
+.wrap{max-width:1200px;margin:0 auto}
+.rule{height:1px;background:var(--line);width:100%;margin-bottom:3.5rem}
+
+/* ---------- ORIGEM (no image — typographic watermark instead) ---------- */
+.origem{background:var(--bg);overflow:hidden}
+.origem-grid{display:grid;grid-template-columns:280px 1fr;gap:5vw}
+.origem-side{position:sticky;top:6rem;align-self:start}
+.origem-side .label{margin-bottom:1rem}
+.origem-side h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2rem,3.4vw,3rem);line-height:1.05;margin:0}
+.origem-side .years{margin-top:1.6rem;font-size:.85rem;color:var(--grey-dim);letter-spacing:.04em}
+.origem-body p{font-size:1.15rem;line-height:1.85;color:var(--grey);max-width:62ch;margin:0 0 1.4rem}
+.origem-body p:last-child{margin-bottom:0;color:var(--ivory);font-style:italic;font-family:'Fraunces',serif;font-size:1.3rem;line-height:1.6}
+.watermark{position:absolute;top:-4vw;right:-2vw;font-family:'Fraunces',serif;font-weight:700;font-size:min(28vw,340px);color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.06);line-height:1;z-index:0;pointer-events:none;user-select:none}
+
+/* ---------- IMPACT / STATEMENT ---------- */
+.impact{background:var(--red-deep);position:relative;overflow:hidden;padding:7rem 5vw}
+.impact::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 75% 30%,rgba(228,34,58,.22),transparent 65%)}
+.impact-inner{position:relative;z-index:2;max-width:1000px;margin:0 auto}
+.impact .label{color:#f0a8b0;margin-bottom:1.2rem;display:block}
+.impact h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2.4rem,6vw,5.2rem);line-height:1.05;margin:0;color:var(--ivory)}
+.impact h2 em{font-style:italic;color:var(--red)}
+
+/* ---------- NA CASA ---------- */
+.casa{background:var(--bg)}
+.casa-grid{display:grid;grid-template-columns:1fr 1.6fr;gap:5vw}
+.casa-head{position:sticky;top:6rem;align-self:start}
+.casa-head h2{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(2rem,3.2vw,2.8rem);line-height:1.1;margin:.8rem 0 0}
+.casa-body p{font-size:1.15rem;line-height:1.85;color:var(--grey);margin:0 0 1.5rem;max-width:62ch}
+.pull{display:flex;gap:1.2rem;align-items:flex-start;margin:2.6rem 0;padding-left:1.4rem;border-left:2px solid var(--red)}
+.pull p{margin:0;font-family:'Fraunces',serif;font-style:italic;font-size:1.5rem;line-height:1.5;color:var(--ivory)}
+.casa-body strong{color:var(--ivory);font-weight:600}
+
+/* ---------- VALUES ---------- */
+.values{background:var(--bg2)}
+.values-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.value{padding:2.4rem 1.8rem 0;border-top:1px solid var(--line)}
+.value .n{font-family:'Fraunces',serif;font-weight:600;font-size:2.6rem;color:var(--red);line-height:1}
+.value h3{font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--ivory);margin:1.4rem 0 .8rem}
+.value p{font-size:.98rem;line-height:1.6;color:var(--grey-dim);margin:0 0 2.2rem}
+
+/* ---------- CLOSE ---------- */
+.close{background:var(--bg);text-align:center;padding:9rem 5vw}
+.close .label{display:block;margin-bottom:1.4rem}
+.close h2{font-family:'Fraunces',serif;font-weight:500;font-style:italic;font-size:clamp(3rem,8vw,6.5rem);line-height:1;margin:0;color:var(--ivory)}
+.close p{margin-top:1.2rem;font-size:.85rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey-dim)}
+
+footer{background:var(--bg);border-top:1px solid var(--line);padding:2rem 5vw;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--grey-dim)}
+
+@media(max-width:860px){
+  .navlinks{display:none}
+  .origem-grid,.casa-grid{grid-template-columns:1fr}
+  .origem-side,.casa-head{position:static;margin-bottom:2rem}
+  .values-grid{grid-template-columns:repeat(2,1fr)}
+  .section{padding:5rem 6vw}
+  .watermark{display:none}
+  .hero-foot{flex-direction:column;align-items:flex-start}
+}
 </style>
 </head>
 <body>
+
 <header class="nav">
-<a class="brand" href="#top">PAI GIL <strong>D'OXAGUIÃ</strong></a>
-<nav class="navlinks" aria-label="Navegação"><a href="#quem">Quem é</a><a href="#casa">Na casa</a><a href="#essencia">Essência</a><a href="#laroye">Laroyê</a></nav>
+  <a class="brand" href="index.html">Pai Gil D'Oxaguiã</a>
+  <nav class="navlinks">
+    <a href="index.html">Início</a>
+    <a href="quem.html">Quem sou</a>
+    <a href="atendimento.html">Atendimento</a>
+  </nav>
 </header>
-<main id="top">
-<section class="hero"><img src="padilha_hero.jpg" alt="Representação artística de Maria Padilha"><div class="hero-inner"><div class="eyebrow">Pombagira da Casa</div><h1>Maria<br>Padilha</h1><div class="rule"></div><p class="hero-tag">Chegou meia-noite... e Padilha chegou</p><p class="hero-quote">“Seu sorriso e sua gargalhada são marcantes — assim como sua presença.”</p></div></section>
-<section class="section quem" id="quem"><div class="wrap quem-grid"><div class="frame"><img src="padilha_hero.jpg" alt="Maria Padilha em traje vermelho"><div class="frame-overlay"></div><div class="frame-mark">Maria Padilha</div><div class="frame-small">Força • Presença • Movimento</div></div><div><div class="eyebrow">Quem é Maria Padilha?</div><h2>Uma presença que não passa despercebida.</h2><p class="lead">Na casa de Pai Gil D'Oxaguiã, Maria Padilha ocupa um lugar especial em sua trajetória espiritual.</p><p>Sua presença representa força, proteção, maturidade, inteligência e movimento. Seu sorriso é marcante; sua gargalhada, inconfundível. Quando chega, sua presença se faz sentir.</p></div></div></section>
-<section class="impact" aria-label="Frase de destaque"><div class="impact-inner"><div class="tiny">Firmeza e respeito</div><blockquote>“Com Exu <span>não se brinca.</span>”</blockquote></div></section>
-<section class="section casa" id="casa"><div class="wrap casa-grid"><div class="sticky"><div class="eyebrow">Na casa de Pai Gil D'Oxaguiã</div><h2>Uma longa história <span>de estrada.</span></h2></div><div class="copy"><p>Essa Pombagira vem à Terra para orientar, trabalhando em profunda conexão com Pai Gil. Existe entre entidade e médium uma longa história de estrada, construída através dos anos, da confiança e do trabalho espiritual.</p><div class="pull">“Verdadeira, firme e sem rodeios, Padilha não mede palavras.”</div><p>Sua orientação é certeira: seja diante dos clientes que procuram a casa, seja junto aos filhos que nela caminham, ela aponta aquilo que precisa ser visto e o caminho que precisa ser trilhado.</p><p><strong>Maria Padilha não promete caminhos fáceis.</strong> Ela orienta, movimenta e ensina a caminhar.</p><div class="signature">Maria Padilha</div><div class="sigsub">Pombagira da Casa</div></div></div></section>
-<section class="section values" id="essencia"><div class="wrap"><div class="eyebrow">Sua presença na casa</div><h2>Firmeza que orienta. Presença que movimenta.</h2><div class="values-grid"><article class="value"><div class="num">01</div><h3>Força</h3><p>Uma presença firme, reconhecida pela intensidade e pela segurança com que se manifesta.</p></article><article class="value"><div class="num">02</div><h3>Proteção</h3><p>Atuação marcada pelo cuidado com os caminhos e pela orientação de quem procura a casa.</p></article><article class="value"><div class="num">03</div><h3>Inteligência</h3><p>Uma palavra direta, madura e certeira, sem rodeios ou meias verdades.</p></article><article class="value"><div class="num">04</div><h3>Movimento</h3><p>A força motora que impulsiona decisões, mudanças e o caminho que precisa ser trilhado.</p></article></div></div></section>
-<section class="final" id="laroye"><div class="final-inner"><div class="orn">✦ ◆ ✦</div><h3>Laroyê,<br>Maria Padilha!</h3><p>Laroyê, Pombagira!</p></div></section>
+
+<main>
+
+  <section class="hero">
+    <img src="padilha_hero.jpg" alt="Maria Padilha, Pombagira da casa de Pai Gil D'Oxaguiã">
+    <div class="hero-inner">
+      <span class="label">Pombagira da casa</span>
+      <h1>Maria<br>Padilha</h1>
+      <div class="hero-foot">
+        <p class="hero-quote">Chegou meia-noite... e Padilha chegou.</p>
+        <span class="hero-num">01 — Sevilha, 1334</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section origem">
+    <span class="watermark">PADILHA</span>
+    <div class="wrap origem-grid">
+      <div class="origem-side">
+        <span class="label">A lenda</span>
+        <h2>Origem</h2>
+        <p class="years">Sevilha, Castela<br>1334 — 1361</p>
+      </div>
+      <div class="origem-body">
+        <p>Conta a história que María de Padilla nasceu em Sevilha, filha de uma família nobre a serviço da corte castelhana. Ainda jovem, tornou-se a mulher amada do rei Pedro I de Castela, com quem teve quatro filhos.</p>
+        <p>Mesmo forçado por razões políticas a se casar com Branca de Bourbon, foi a María que o rei uniu-se secretamente, e é a ela que permaneceu fiel até o fim. María morreu jovem, aos 25 anos — mas seu nome não morreu com ela. Pedro I declarou publicamente que ela havia sido, sempre, sua verdadeira e legítima esposa.</p>
+        <p>Dessa história nasce a lenda que atravessa os séculos, chegando à Umbanda e à Quimbanda como uma das mais respeitadas Pombagiras.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact">
+    <div class="impact-inner">
+      <span class="label">Firmeza e respeito</span>
+      <h2>Com Exu <em>não se brinca.</em></h2>
+    </div>
+  </section>
+
+  <section class="section casa">
+    <div class="wrap casa-grid">
+      <div class="casa-head">
+        <span class="label">Na casa de Pai Gil</span>
+        <h2>Uma longa história de estrada.</h2>
+      </div>
+      <div class="casa-body">
+        <p>Maria Padilha ocupa um lugar especial em sua trajetória espiritual. Sua presença representa força, proteção, maturidade, inteligência e movimento. Seu sorriso é marcante; sua gargalhada, inconfundível. Quando chega, sua presença se faz sentir.</p>
+        <p>Essa Pombagira vem à Terra para orientar, trabalhando em profunda conexão com Pai Gil. Existe entre entidade e médium uma longa história de estrada, construída através dos anos, da confiança e do trabalho espiritual.</p>
+        <div class="pull"><p>Verdadeira, firme e sem rodeios, Padilha não mede palavras.</p></div>
+        <p>Sua orientação é certeira: seja diante dos clientes que procuram a casa, seja junto aos filhos que nela caminham, ela aponta aquilo que precisa ser visto e o caminho que precisa ser trilhado.</p>
+        <p><strong>Maria Padilha não promete caminhos fáceis.</strong> Ela orienta, movimenta e ensina a caminhar.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="values">
+    <div class="values-grid">
+      <article class="value"><div class="n">01</div><h3>Força</h3><p>Presença firme, reconhecida pela intensidade com que se manifesta.</p></article>
+      <article class="value"><div class="n">02</div><h3>Proteção</h3><p>Cuidado com os caminhos e orientação de quem procura a casa.</p></article>
+      <article class="value"><div class="n">03</div><h3>Inteligência</h3><p>Palavra direta, madura e certeira, sem rodeios.</p></article>
+      <article class="value"><div class="n">04</div><h3>Movimento</h3><p>Força motora que impulsiona decisões e o caminho a trilhar.</p></article>
+    </div>
+  </section>
+
+  <section class="close">
+    <span class="label">Axé</span>
+    <h2>Laroyê, Padilha.</h2>
+    <p>Laroyê, Pombagira</p>
+  </section>
+
 </main>
-<footer class="footer"><span>Pai Gil D'Oxaguiã</span><span>Tradição • Espiritualidade • Axé</span></footer>
+
+<footer>
+  <span>Pai Gil D'Oxaguiã</span>
+  <span>Tradição • Fé • Sabedoria • Equilíbrio</span>
+</footer>
+
 </body>
 </html>
