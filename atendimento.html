@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Agende uma consulta com Pai Gil D'Oxaguiã.">
+<title>Atendimento | Pai Gil D'Oxaguiã</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-deep:#08111d;
+  --navy:#0d1e33;
+  --navy-light:#173a5e;
+  --gold:#c9a24b;
+  --gold-bright:#e3c37c;
+  --blue:#6ba3e0;
+  --ivory:#f4f1e8;
+  --paper:#f2ede1;
+  --smoke:#cdd6e0;
+  --smoke-dim:#8fa0b3;
+  --wine:#4a0d13;
+  --ember:#c8213a;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--navy-deep);color:var(--ivory);font-family:'EB Garamond',serif;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.eyebrow{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.38em;text-transform:uppercase;color:var(--gold-bright)}
+
+/* ---------- NAV ---------- */
+.nav{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;height:88px;background:linear-gradient(180deg,rgba(6,12,20,.92),rgba(6,12,20,.55) 75%,transparent);backdrop-filter:blur(6px)}
+.nav.solid{background:rgba(8,17,29,.96);border-bottom:1px solid rgba(201,162,75,.15);backdrop-filter:blur(8px)}
+.brand{display:flex;align-items:center;gap:.85rem}
+.brand svg{width:34px;height:34px;flex-shrink:0;color:var(--blue)}
+.brand-text{font-family:'Playfair Display',serif;line-height:1.05}
+.brand-text .l1{display:block;font-size:1.05rem;font-weight:700;letter-spacing:.1em;color:var(--ivory)}
+.brand-text .l2{display:block;font-size:.72rem;font-weight:600;letter-spacing:.18em;color:var(--blue)}
+.navlinks{display:flex;align-items:center;gap:2.1rem;font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase}
+.navlinks a{opacity:.88;position:relative;padding:.4rem 0}
+.navlinks a:hover{opacity:1;color:var(--gold-bright)}
+.navlinks .active{opacity:1;color:var(--gold-bright)}
+.navlinks .active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--gold)}
+.has-drop{position:relative}
+.chev{display:inline-block;margin-left:.3rem;transform:translateY(1px);font-size:.6rem}
+.dropdown{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);min-width:180px;background:var(--navy);border:1px solid rgba(201,162,75,.25);padding:.6rem 0;opacity:0;pointer-events:none;transition:opacity .18s ease, transform .18s ease}
+.has-drop:hover .dropdown{opacity:1;pointer-events:auto;transform:translateX(-50%) translateY(0)}
+.dropdown a{display:block;padding:.55rem 1.2rem;font-size:.66rem;letter-spacing:.1em;white-space:nowrap}
+.dropdown a:hover{background:rgba(201,162,75,.08)}
+.compass{width:26px;height:26px;color:var(--blue)}
+
+/* ---------- HERO (index only) ---------- */
+.hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:var(--navy)}
+.hero-photo{position:absolute;top:0;right:0;height:100%;width:56%;overflow:hidden}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
+.hero-photo::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--navy) 0%,rgba(13,30,51,.15) 22%,transparent 45%)}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 60% 70% at 18% 40%,rgba(23,58,94,.5),transparent 60%);pointer-events:none}
+.hero-inner{position:relative;z-index:2;width:min(640px,90vw);margin:6rem 0 0 6vw}
+.hero-mark{width:52px;height:64px;color:var(--blue);margin-bottom:1.4rem}
+.hero h1{font-family:'Playfair Display',serif;font-weight:700;line-height:.98;margin:0}
+.hero h1 .l1{display:block;font-size:clamp(3rem,6.6vw,5.2rem);color:var(--ivory)}
+.hero h1 .l2{display:block;font-size:clamp(2rem,4.6vw,3.6rem);color:var(--blue);margin-top:.15em}
+.hero-rule{display:flex;align-items:center;gap:.7rem;width:min(360px,70vw);margin:1.6rem 0}
+.hero-rule::before,.hero-rule::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hero-rule svg{width:9px;height:9px;color:var(--gold);flex-shrink:0}
+.hero-tag{font-size:clamp(1.3rem,2.4vw,1.65rem);line-height:1.4;margin:0 0 2.6rem;color:var(--smoke)}
+.hero-tag em{font-style:italic;color:var(--blue)}
+.pillars{display:flex;gap:0;align-items:flex-start;flex-wrap:wrap}
+.pillar{display:flex;flex-direction:column;align-items:center;gap:.7rem;padding:0 1.6rem;position:relative}
+.pillar:first-child{padding-left:0}
+.pillar+.pillar::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;background:rgba(201,162,75,.3)}
+.pillar svg{width:30px;height:30px;color:var(--blue)}
+.pillar span{font-family:'Cinzel',serif;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;text-align:center;color:var(--smoke)}
+.pillar a{display:flex;flex-direction:column;align-items:center;gap:.7rem}
+
+/* ---------- TORN DIVIDER ---------- */
+.torn{position:relative;height:64px;background:var(--navy-deep)}
+.torn svg{position:absolute;bottom:-1px;left:0;width:100%;height:100%;display:block}
+.strip{background:var(--paper);color:var(--navy);text-align:center;padding:1.5rem 4vw}
+.strip p{margin:0;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;color:var(--navy-light)}
+
+/* ---------- PAGE BANNER (inner pages) ---------- */
+.banner{position:relative;padding:11rem 6vw 4.5rem;background:linear-gradient(180deg,var(--navy) 0%,var(--navy-deep) 100%);text-align:left;overflow:hidden}
+.banner::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 85% 20%,rgba(107,163,224,.14),transparent 60%);pointer-events:none}
+.banner .wrap{position:relative;z-index:2}
+.banner h1{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(2.4rem,4.6vw,3.6rem);margin:.6rem 0 0;color:var(--ivory)}
+.banner p.sub{font-size:1.15rem;color:var(--smoke);max-width:60ch;margin:1.1rem 0 0;line-height:1.7}
+
+/* ---------- SECTIONS ---------- */
+.section{padding:5.5rem 6vw;position:relative}
+.wrap{max-width:1180px;margin:0 auto}
+.section h2{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(1.9rem,3.2vw,2.6rem);margin:.7rem 0 1.4rem;color:var(--ivory)}
+.section p.lead{font-size:1.15rem;line-height:1.75;color:var(--smoke);max-width:62ch}
+
+.quem{background:linear-gradient(180deg,var(--navy-deep),var(--navy))}
+.quem-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center}
+.quem-frame{position:relative;border:1px solid rgba(201,162,75,.25);min-height:420px;overflow:hidden;background:var(--navy-light)}
+.quem-frame img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 10%;filter:saturate(.92) brightness(.85)}
+.quem-frame::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(8,17,29,.75))}
+
+.cards{background:var(--navy)}
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,162,75,.18);border:1px solid rgba(201,162,75,.18)}
+.cards-grid.two{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--navy-deep);padding:2.6rem 2rem;text-align:left}
+.card svg{width:34px;height:34px;color:var(--blue);margin-bottom:1.2rem}
+.card h3{font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright);margin:0 0 .9rem}
+.card p{font-size:1rem;line-height:1.65;color:var(--smoke-dim);margin:0}
+
+.padilha-teaser{background:linear-gradient(135deg,var(--wine) 0%,#1a0508 100%);position:relative;overflow:hidden}
+.padilha-teaser::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 50% 70% at 80% 30%,rgba(200,33,58,.25),transparent 60%)}
+.pt-inner{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:3rem;flex-wrap:wrap}
+.pt-text{max-width:520px}
+.pt-text .eyebrow{color:var(--gold-bright)}
+.pt-text h2{color:#f2e4d8}
+.pt-text p{color:#e3cfc4;font-size:1.1rem;line-height:1.7}
+.pt-btn{display:inline-flex;align-items:center;gap:.6rem;margin-top:1rem;padding:.9rem 1.8rem;border:1px solid var(--ember);color:#f2e4d8;font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;transition:background .2s ease}
+.pt-btn:hover{background:rgba(200,33,58,.18)}
+
+.atendimento-box{background:var(--navy);border:1px solid rgba(201,162,75,.2);padding:2.4rem;margin-top:1rem}
+.atendimento-box h3{font-family:'Cinzel',serif;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-bright);margin:0 0 .8rem}
+.atendimento-box p{color:var(--smoke);line-height:1.7;margin:0}
+
+.cta-row{display:flex;gap:1rem;justify-content:flex-start;flex-wrap:wrap;margin-top:1.6rem}
+.btn{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2rem;border:1px solid var(--gold);color:var(--ivory);transition:background .2s ease;display:inline-block}
+.btn:hover{background:rgba(201,162,75,.12)}
+.btn.solid{background:var(--gold);color:var(--navy-deep);border-color:var(--gold)}
+.btn.solid:hover{background:var(--gold-bright)}
+
+/* ---------- FORM ---------- */
+.form-section{background:var(--navy-deep)}
+.form-wrap{max-width:680px;margin:0 auto;background:var(--navy);border:1px solid rgba(201,162,75,.22);padding:3rem 2.4rem}
+.form-wrap .eyebrow{display:block;margin-bottom:.6rem}
+.form-wrap h2{margin-top:0}
+.field{margin-bottom:1.5rem}
+.field label{display:block;font-family:'Cinzel',serif;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-bright);margin-bottom:.6rem}
+.field input,.field select,.field textarea{width:100%;background:var(--navy-deep);border:1px solid rgba(201,162,75,.3);color:var(--ivory);font-family:'EB Garamond',serif;font-size:1.05rem;padding:.85rem 1rem;border-radius:0;transition:border-color .2s ease}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
+.field textarea{resize:vertical;min-height:110px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
+.hp-field{position:absolute;left:-9999px;opacity:0}
+.form-submit{width:100%;background:var(--gold);color:var(--navy-deep);border:none;font-family:'Cinzel',serif;font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;padding:1.1rem 2rem;cursor:pointer;transition:background .2s ease}
+.form-submit:hover{background:var(--gold-bright)}
+.form-submit:disabled{opacity:.6;cursor:default}
+.form-msg{margin-top:1.2rem;padding:1rem 1.2rem;font-size:.95rem;line-height:1.5;display:none}
+.form-msg.show{display:block}
+.form-msg.success{background:rgba(107,163,224,.12);border:1px solid rgba(107,163,224,.4);color:var(--ivory)}
+.form-msg.error{background:rgba(200,33,58,.12);border:1px solid rgba(200,33,58,.5);color:#f2c9cf}
+.form-note{font-size:.85rem;color:var(--smoke-dim);margin-top:1.4rem;line-height:1.6}
+
+@media(max-width:640px){
+  .field-row{grid-template-columns:1fr}
+  .form-wrap{padding:2.2rem 1.5rem}
+}
+
+footer{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.06);padding:2.2rem 5vw;display:flex;flex-wrap:wrap;justify-content:space-between;gap:1rem;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:var(--smoke-dim)}
+
+@media(max-width:900px){
+  .navlinks{display:none}
+  .hero-photo{width:100%;opacity:.35}
+  .hero-photo::before{background:linear-gradient(180deg,var(--navy) 10%,rgba(13,30,51,.4) 60%,var(--navy) 100%)}
+  .hero-inner{margin:7rem 6vw 3rem}
+  .pillars{flex-wrap:wrap;gap:1.4rem 0}
+  .quem-grid{grid-template-columns:1fr}
+  .cards-grid,.cards-grid.two{grid-template-columns:1fr}
+  .pt-inner{flex-direction:column;align-items:flex-start}
+  .section{padding:4rem 6vw}
+  .banner{padding:8.5rem 6vw 3.5rem}
+}
+
+
+/* ---------- MOBILE MENU ---------- */
+.menu-btn{display:none;background:none;border:none;color:var(--ivory);font-size:1.7rem;line-height:1;cursor:pointer;padding:.2rem .3rem;z-index:36;position:relative}
+@media(max-width:900px){
+  .compass{display:none}
+  .menu-btn{display:block}
+  .navlinks{display:none;position:fixed;top:0;left:0;right:0;bottom:0;width:100%;height:100%;background:rgba(6,12,20,.98);backdrop-filter:blur(10px);flex-direction:column;align-items:center;justify-content:center;gap:2rem;font-size:1rem;z-index:35}
+  .navlinks.open{display:flex}
+  .navlinks .has-drop{display:flex;flex-direction:column;align-items:center;gap:.9rem}
+  .navlinks .dropdown{position:static;opacity:1;pointer-events:auto;transform:none;background:none;border:none;padding:0;text-align:center;min-width:0}
+  .navlinks .dropdown a{padding:.3rem 0;font-size:.85rem;opacity:.75}
+}
+</style>
+</head>
+<body>
+<header class="nav solid">
+  <a class="brand" href="index.html">
+    <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 2v44M9 14h22M14 20h12" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="8" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
+    <span class="brand-text"><span class="l1">PAI GIL</span><span class="l2">DE OXAGUIÃ</span></span>
+  </a>
+  <nav class="navlinks" aria-label="Navegação principal">
+    <a href="index.html">Início</a>
+    <div class="has-drop">
+      <a href="jogos.html">Jogos <span class="chev">▾</span></a>
+      <div class="dropdown">
+        <a href="jogos.html#buzios">Jogo de Búzios</a>
+        <a href="jogos.html#cartas">Cartas</a>
+      </div>
+    </div>
+    <a href="cursos.html">Cursos</a>
+    <a href="orientacao.html">Orientação</a>
+    <a href="quem.html">Quem sou</a>
+    <a href="maria-padilha-final.html">Maria Padilha</a>
+    <a href="atendimento.html" class="active">Atendimento</a>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" onclick="toggleMenu()">☰</button>
+  <svg class="compass" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" stroke="currentColor" stroke-width="1.3"/></svg>
+</header>
+<main>
+  <section class="banner">
+    <div class="wrap">
+      <span class="eyebrow">Fale comigo</span>
+      <h1>Agende sua consulta.</h1>
+      <p class="sub">Atendimentos presenciais e à distância, mediante agendamento.</p>
+    </div>
+  </section>
+  <section class="section cards">
+    <div class="wrap">
+      <div class="cards-grid two">
+        <div class="atendimento-box">
+          <h3><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3h4l2 5-2.5 2A12 12 0 0 0 14 15l2-2.5 5 2v4a2 2 0 0 1-2 2C10.5 20.5 3.5 13.5 4 5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.3"/></svg> Norge / Noruega</h3>
+          <p>Atendimentos em Oslo, mediante agendamento prévio.</p>
+        </div>
+        <div class="atendimento-box">
+          <h3>Como agendar</h3>
+          <p>Escreva pelo WhatsApp informando sua disponibilidade — a confirmação de horário é feita diretamente por lá. Também é possível acompanhar pelo TikTok.</p>
+        </div>
+      </div>
+      <div class="cta-row">
+        <a class="btn solid" href="https://wa.me/5513996827597" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn" href="https://www.tiktok.com/@bruxogil2" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section form-section">
+    <div class="wrap">
+      <div class="form-wrap">
+        <span class="eyebrow">Solicitar consulta</span>
+        <h2>Preencha seus dados</h2>
+        <p class="lead" style="margin-bottom:2rem">Envie seu pedido pelo formulário abaixo. Retorno o contato para confirmar data, horário e valores.</p>
+
+        <form id="consultaForm" action="https://formspree.io/f/xrpgegak" method="POST">
+          <input type="text" name="_gotcha" class="hp-field" tabindex="-1" autocomplete="off">
+          <input type="hidden" name="_subject" value="Novo pedido de consulta — site Pai Gil D'Oxaguiã">
+
+          <div class="field-row">
+            <div class="field">
+              <label for="nome">Nome completo</label>
+              <input type="text" id="nome" name="Nome" required>
+            </div>
+            <div class="field">
+              <label for="whatsapp">WhatsApp</label>
+              <input type="tel" id="whatsapp" name="WhatsApp" placeholder="+47 ..." required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="E-mail" required>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="tipo">Tipo de consulta</label>
+              <select id="tipo" name="Tipo de consulta" required>
+                <option value="" disabled selected>Selecione</option>
+                <option>Jogo de Búzios</option>
+                <option>Cartas</option>
+                <option>Orientação Espiritual</option>
+                <option>Cursos</option>
+                <option>Outro</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="disponibilidade">Disponibilidade</label>
+              <input type="text" id="disponibilidade" name="Disponibilidade" placeholder="Ex: terça à tarde">
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="mensagem">Mensagem (opcional)</label>
+            <textarea id="mensagem" name="Mensagem" placeholder="Conte um pouco sobre o que procura..."></textarea>
+          </div>
+
+          <button type="submit" class="form-submit">Enviar pedido de consulta</button>
+
+          <div class="form-msg" id="formMsg"></div>
+        </form>
+
+        <p class="form-note">Seus dados são usados apenas para retorno do contato e agendamento — não são compartilhados com terceiros.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+<footer>
+  <span>Pai Gil D'Oxaguiã</span>
+  <span>Tradição • Fé • Sabedoria • Equilíbrio</span>
+</footer>
+
+<script>
+function toggleMenu(){
+  var nav = document.querySelector('.navlinks');
+  var btn = document.getElementById('menuBtn');
+  var isOpen = nav.classList.toggle('open');
+  btn.textContent = isOpen ? '\u2715' : '\u2630';
+  btn.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
+}
+document.querySelectorAll('.navlinks a').forEach(function(a){
+  a.addEventListener('click', function(){
+    document.querySelector('.navlinks').classList.remove('open');
+    document.getElementById('menuBtn').textContent = '\u2630';
+    document.body.style.overflow = '';
+  });
+});
+
+var consultaForm = document.getElementById('consultaForm');
+if (consultaForm) {
+  consultaForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var form = e.target;
+    var btn = form.querySelector('.form-submit');
+    var msg = document.getElementById('formMsg');
+    var endpoint = form.getAttribute('action');
+
+    if (endpoint.indexOf('SEU_ID_AQUI') !== -1) {
+      msg.textContent = 'Formulário ainda não conectado — configure o Formspree para ativar o envio.';
+      msg.className = 'form-msg show error';
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Enviando...';
+    msg.className = 'form-msg';
+
+    fetch(endpoint, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    }).then(function(response){
+      if (response.ok) {
+        form.reset();
+        msg.textContent = 'Pedido enviado! Retornarei o contato em breve para confirmar sua consulta.';
+        msg.className = 'form-msg show success';
+      } else {
+        throw new Error('Erro no envio');
+      }
+    }).catch(function(){
+      msg.textContent = 'Não foi possível enviar agora. Tente novamente ou fale direto pelo WhatsApp.';
+      msg.className = 'form-msg show error';
+    }).finally(function(){
+      btn.disabled = false;
+      btn.textContent = 'Enviar pedido de consulta';
+    });
+  });
+}
+</script>
+</body>
+</html>
