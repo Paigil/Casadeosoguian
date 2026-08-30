@@ -3,11 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Pai Gil D'Oxaguiã — Tradição, fé, sabedoria e equilíbrio. Orientação espiritual, jogos e cursos.">
-<title>Pai Gil D'Oxaguiã</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+<meta name="description" content="Pai Gil D'Oxaguiã — Tradição, fé, sabedoria e equilíbrio.">
+<title>Início | Pai Gil D'Oxaguiã</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Cinzel:wght@400;500;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy-deep:#08111d;
@@ -32,15 +30,16 @@ img{display:block;max-width:100%}
 
 /* ---------- NAV ---------- */
 .nav{position:fixed;top:0;left:0;right:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:0 4vw;height:88px;background:linear-gradient(180deg,rgba(6,12,20,.92),rgba(6,12,20,.55) 75%,transparent);backdrop-filter:blur(6px)}
+.nav.solid{background:rgba(8,17,29,.96);border-bottom:1px solid rgba(201,162,75,.15);backdrop-filter:blur(8px)}
 .brand{display:flex;align-items:center;gap:.85rem}
-.brand svg{width:34px;height:34px;flex-shrink:0}
+.brand svg{width:34px;height:34px;flex-shrink:0;color:var(--blue)}
 .brand-text{font-family:'Playfair Display',serif;line-height:1.05}
 .brand-text .l1{display:block;font-size:1.05rem;font-weight:700;letter-spacing:.1em;color:var(--ivory)}
 .brand-text .l2{display:block;font-size:.72rem;font-weight:600;letter-spacing:.18em;color:var(--blue)}
 .navlinks{display:flex;align-items:center;gap:2.1rem;font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.14em;text-transform:uppercase}
 .navlinks a{opacity:.88;position:relative;padding:.4rem 0}
 .navlinks a:hover{opacity:1;color:var(--gold-bright)}
-.navlinks .active{opacity:1}
+.navlinks .active{opacity:1;color:var(--gold-bright)}
 .navlinks .active::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:1px;background:var(--gold)}
 .has-drop{position:relative}
 .chev{display:inline-block;margin-left:.3rem;transform:translateY(1px);font-size:.6rem}
@@ -49,9 +48,8 @@ img{display:block;max-width:100%}
 .dropdown a{display:block;padding:.55rem 1.2rem;font-size:.66rem;letter-spacing:.1em;white-space:nowrap}
 .dropdown a:hover{background:rgba(201,162,75,.08)}
 .compass{width:26px;height:26px;color:var(--blue)}
-.nav-toggle{display:none}
 
-/* ---------- HERO ---------- */
+/* ---------- HERO (index only) ---------- */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;background:var(--navy)}
 .hero-photo{position:absolute;top:0;right:0;height:100%;width:56%;overflow:hidden}
 .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 15%}
@@ -66,27 +64,33 @@ img{display:block;max-width:100%}
 .hero-rule::before,.hero-rule::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
 .hero-rule svg{width:9px;height:9px;color:var(--gold);flex-shrink:0}
 .hero-tag{font-size:clamp(1.3rem,2.4vw,1.65rem);line-height:1.4;margin:0 0 2.6rem;color:var(--smoke)}
-.hero-tag em{font-style:italic;color:var(--blue-bright,var(--blue))}
-.pillars{display:flex;gap:0;align-items:flex-start}
+.hero-tag em{font-style:italic;color:var(--blue)}
+.pillars{display:flex;gap:0;align-items:flex-start;flex-wrap:wrap}
 .pillar{display:flex;flex-direction:column;align-items:center;gap:.7rem;padding:0 1.6rem;position:relative}
 .pillar:first-child{padding-left:0}
 .pillar+.pillar::before{content:"";position:absolute;left:0;top:6px;bottom:6px;width:1px;background:rgba(201,162,75,.3)}
 .pillar svg{width:30px;height:30px;color:var(--blue)}
 .pillar span{font-family:'Cinzel',serif;font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;text-align:center;color:var(--smoke)}
+.pillar a{display:flex;flex-direction:column;align-items:center;gap:.7rem}
 
 /* ---------- TORN DIVIDER ---------- */
 .torn{position:relative;height:64px;background:var(--navy-deep)}
 .torn svg{position:absolute;bottom:-1px;left:0;width:100%;height:100%;display:block}
-
-/* ---------- FOOTER STRIP UNDER HERO ---------- */
 .strip{background:var(--paper);color:var(--navy);text-align:center;padding:1.5rem 4vw}
 .strip p{margin:0;font-family:'Cinzel',serif;font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;color:var(--navy-light)}
 
+/* ---------- PAGE BANNER (inner pages) ---------- */
+.banner{position:relative;padding:11rem 6vw 4.5rem;background:linear-gradient(180deg,var(--navy) 0%,var(--navy-deep) 100%);text-align:left;overflow:hidden}
+.banner::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse 50% 60% at 85% 20%,rgba(107,163,224,.14),transparent 60%);pointer-events:none}
+.banner .wrap{position:relative;z-index:2}
+.banner h1{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(2.4rem,4.6vw,3.6rem);margin:.6rem 0 0;color:var(--ivory)}
+.banner p.sub{font-size:1.15rem;color:var(--smoke);max-width:60ch;margin:1.1rem 0 0;line-height:1.7}
+
 /* ---------- SECTIONS ---------- */
-.section{padding:6.5rem 6vw;position:relative}
+.section{padding:5.5rem 6vw;position:relative}
 .wrap{max-width:1180px;margin:0 auto}
-.section h2{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(2rem,3.6vw,3rem);margin:.7rem 0 1.6rem;color:var(--ivory)}
-.section p.lead{font-size:1.2rem;line-height:1.7;color:var(--smoke);max-width:60ch}
+.section h2{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(1.9rem,3.2vw,2.6rem);margin:.7rem 0 1.4rem;color:var(--ivory)}
+.section p.lead{font-size:1.15rem;line-height:1.75;color:var(--smoke);max-width:62ch}
 
 .quem{background:linear-gradient(180deg,var(--navy-deep),var(--navy))}
 .quem-grid{display:grid;grid-template-columns:1fr 1fr;gap:6vw;align-items:center}
@@ -96,9 +100,10 @@ img{display:block;max-width:100%}
 
 .cards{background:var(--navy)}
 .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,162,75,.18);border:1px solid rgba(201,162,75,.18)}
-.card{background:var(--navy-deep);padding:2.6rem 2rem;text-align:center}
-.card svg{width:38px;height:38px;color:var(--blue);margin-bottom:1.2rem}
-.card h3{font-family:'Cinzel',serif;font-size:.9rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright);margin:0 0 .9rem}
+.cards-grid.two{grid-template-columns:repeat(2,1fr)}
+.card{background:var(--navy-deep);padding:2.6rem 2rem;text-align:left}
+.card svg{width:34px;height:34px;color:var(--blue);margin-bottom:1.2rem}
+.card h3{font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold-bright);margin:0 0 .9rem}
 .card p{font-size:1rem;line-height:1.65;color:var(--smoke-dim);margin:0}
 
 .padilha-teaser{background:linear-gradient(135deg,var(--wine) 0%,#1a0508 100%);position:relative;overflow:hidden}
@@ -111,12 +116,12 @@ img{display:block;max-width:100%}
 .pt-btn{display:inline-flex;align-items:center;gap:.6rem;margin-top:1rem;padding:.9rem 1.8rem;border:1px solid var(--ember);color:#f2e4d8;font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;transition:background .2s ease}
 .pt-btn:hover{background:rgba(200,33,58,.18)}
 
-.atendimento{background:var(--navy-deep);text-align:center}
-.atendimento .wrap{max-width:640px;margin:0 auto}
-.atendimento h2{margin-bottom:1rem}
-.atendimento p{color:var(--smoke);font-size:1.1rem;line-height:1.7;margin-bottom:2rem}
-.cta-row{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-.btn{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2rem;border:1px solid var(--gold);color:var(--ivory);transition:background .2s ease}
+.atendimento-box{background:var(--navy);border:1px solid rgba(201,162,75,.2);padding:2.4rem;margin-top:1rem}
+.atendimento-box h3{font-family:'Cinzel',serif;font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-bright);margin:0 0 .8rem}
+.atendimento-box p{color:var(--smoke);line-height:1.7;margin:0}
+
+.cta-row{display:flex;gap:1rem;justify-content:flex-start;flex-wrap:wrap;margin-top:1.6rem}
+.btn{font-family:'Cinzel',serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;padding:1rem 2rem;border:1px solid var(--gold);color:var(--ivory);transition:background .2s ease;display:inline-block}
 .btn:hover{background:rgba(201,162,75,.12)}
 .btn.solid{background:var(--gold);color:var(--navy-deep);border-color:var(--gold)}
 .btn.solid:hover{background:var(--gold-bright)}
@@ -125,69 +130,57 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.06);pa
 
 @media(max-width:900px){
   .navlinks{display:none}
-  .nav-toggle{display:block;background:none;border:none;color:var(--ivory)}
   .hero-photo{width:100%;opacity:.35}
   .hero-photo::before{background:linear-gradient(180deg,var(--navy) 10%,rgba(13,30,51,.4) 60%,var(--navy) 100%)}
   .hero-inner{margin:7rem 6vw 3rem}
   .pillars{flex-wrap:wrap;gap:1.4rem 0}
   .quem-grid{grid-template-columns:1fr}
-  .cards-grid{grid-template-columns:1fr}
+  .cards-grid,.cards-grid.two{grid-template-columns:1fr}
   .pt-inner{flex-direction:column;align-items:flex-start}
-  .section{padding:4.5rem 6vw}
+  .section{padding:4rem 6vw}
+  .banner{padding:8.5rem 6vw 3.5rem}
 }
+
 </style>
 </head>
 <body>
-
 <header class="nav">
-  <a class="brand" href="#top">
+  <a class="brand" href="index.html">
     <svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 2v44M9 14h22M14 20h12" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="8" r="3" stroke="currentColor" stroke-width="1.6"/></svg>
     <span class="brand-text"><span class="l1">PAI GIL</span><span class="l2">DE OXAGUIÃ</span></span>
   </a>
   <nav class="navlinks" aria-label="Navegação principal">
-    <a class="active" href="#top">Início</a>
+    <a href="index.html" class="active">Início</a>
     <div class="has-drop">
-      <a href="#jogos">Jogos <span class="chev">▾</span></a>
+      <a href="jogos.html">Jogos <span class="chev">▾</span></a>
       <div class="dropdown">
-        <a href="#jogos">Jogo de Búzios</a>
-        <a href="#jogos">Cartas</a>
+        <a href="jogos.html#buzios">Jogo de Búzios</a>
+        <a href="jogos.html#cartas">Cartas</a>
       </div>
     </div>
-    <a href="#cursos">Cursos</a>
-    <a href="#orientacao">Orientação</a>
-    <a href="#quem">Quem sou</a>
-    <a href="#padilha">Maria Padilha</a>
-    <a href="#atendimento">Atendimento</a>
+    <a href="cursos.html">Cursos</a>
+    <a href="orientacao.html">Orientação</a>
+    <a href="quem.html">Quem sou</a>
+    <a href="maria-padilha-final.html">Maria Padilha</a>
+    <a href="atendimento.html">Atendimento</a>
   </nav>
   <svg class="compass" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" stroke="currentColor" stroke-width="1.3"/></svg>
 </header>
-
-<main id="top">
-
+<main>
   <section class="hero">
     <div class="hero-photo"><img src="paigil_hero.jpg" alt="Pai Gil D'Oxaguiã em vestes cerimoniais douradas"></div>
     <div class="hero-inner">
-      <svg class="hero-mark" viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 2v44M9 14h22M14 20h12" stroke="currentColor" stroke-width="1.3"/><circle cx="20" cy="8" r="3" stroke="currentColor" stroke-width="1.3"/></svg>
+      <div class="hero-mark"><svg viewBox="0 0 40 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 2v44M9 14h22M14 20h12" stroke="currentColor" stroke-width="1.6"/><circle cx="20" cy="8" r="3" stroke="currentColor" stroke-width="1.6"/></svg></div>
       <h1><span class="l1">Pai Gil</span><span class="l2">de Oxaguiã</span></h1>
       <div class="hero-rule"><svg viewBox="0 0 9 9"><rect width="9" height="9" transform="rotate(45 4.5 4.5)" fill="currentColor"/></svg></div>
       <p class="hero-tag">Venha <em>respirar</em><br>o conhecimento ancestral.</p>
       <div class="pillars">
-        <div class="pillar">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="3" width="10" height="16" rx="1.2" transform="rotate(-8 4 3)" stroke="currentColor" stroke-width="1.3"/><rect x="12" y="4" width="10" height="16" rx="1.2" transform="rotate(8 12 4)" stroke="currentColor" stroke-width="1.3"/></svg>
-          <span>Jogos</span>
-        </div>
-        <div class="pillar">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 5.5c3-1.5 6-1.5 8 0v13c-2-1.5-5-1.5-8 0v-13z" stroke="currentColor" stroke-width="1.3"/><path d="M20 5.5c-3-1.5-6-1.5-8 0v13c2-1.5 5-1.5 8 0v-13z" stroke="currentColor" stroke-width="1.3"/></svg>
-          <span>Cursos</span>
-        </div>
-        <div class="pillar">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" stroke="currentColor" stroke-width="1.2"/></svg>
-          <span>Orientação<br>Espiritual</span>
-        </div>
+        <div class="pillar"><a href="jogos.html"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="3" width="10" height="16" rx="1.2" transform="rotate(-8 4 3)" stroke="currentColor" stroke-width="1.3"/><rect x="12" y="4" width="10" height="16" rx="1.2" transform="rotate(8 12 4)" stroke="currentColor" stroke-width="1.3"/></svg><span>Jogos</span></a></div>
+        <div class="pillar"><a href="cursos.html"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 5.5c3-1.5 6-1.5 8 0v13c-2-1.5-5-1.5-8 0v-13z" stroke="currentColor" stroke-width="1.3"/><path d="M20 5.5c-3-1.5-6-1.5-8 0v13c2-1.5 5-1.5 8 0v-13z" stroke="currentColor" stroke-width="1.3"/></svg><span>Cursos</span></a></div>
+        <div class="pillar"><a href="orientacao.html"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" stroke="currentColor" stroke-width="1.2"/></svg><span>Orientação<br>Espiritual</span></a></div>
       </div>
     </div>
   </section>
-
   <div class="torn">
     <svg viewBox="0 0 1440 64" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0,20 L40,26 L85,14 L130,28 L175,10 L220,24 L270,16 L315,30 L360,12 L410,26 L455,18 L500,32 L545,14 L595,28 L640,16 L685,24 L730,10 L780,26 L825,18 L870,30 L915,14 L965,28 L1010,16 L1055,24 L1100,12 L1150,28 L1195,18 L1240,30 L1285,14 L1335,26 L1380,18 L1440,24 L1440,64 L0,64 Z" fill="#f2ede1"/>
@@ -195,70 +188,10 @@ footer{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,.06);pa
   </div>
   <div class="strip"><p>Tradição • Fé • Sabedoria • Equilíbrio</p></div>
 
-  <section class="section quem" id="quem">
-    <div class="wrap quem-grid">
-      <div class="quem-frame"><img src="paigil_hero.jpg" alt="Pai Gil D'Oxaguiã"></div>
-      <div>
-        <span class="eyebrow">Quem sou</span>
-        <h2>Uma trajetória de fé e caminhada.</h2>
-        <p class="lead">Uma história construída através da espiritualidade, do compromisso e do respeito à tradição — dos primeiros passos no terreiro até a orientação de quem hoje busca a casa.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="section cards" id="jogos">
-    <div class="wrap">
-      <span class="eyebrow">Como posso ajudar</span>
-      <h2>Jogos, cursos e orientação</h2>
-    </div>
-    <div class="cards-grid" style="margin-top:2.5rem">
-      <article class="card" id="cursos">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="4" y="3" width="10" height="16" rx="1.2" transform="rotate(-8 4 3)" stroke="currentColor" stroke-width="1.3"/><rect x="12" y="4" width="10" height="16" rx="1.2" transform="rotate(8 12 4)" stroke="currentColor" stroke-width="1.3"/></svg>
-        <h3>Jogo de Búzios</h3>
-        <p>Consulta através dos búzios para orientação e compreensão dos caminhos.</p>
-      </article>
-      <article class="card">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 5.5c3-1.5 6-1.5 8 0v13c-2-1.5-5-1.5-8 0v-13z" stroke="currentColor" stroke-width="1.3"/><path d="M20 5.5c-3-1.5-6-1.5-8 0v13c2-1.5 5-1.5 8 0v-13z" stroke="currentColor" stroke-width="1.3"/></svg>
-        <h3>Cursos</h3>
-        <p>Formação e estudo dos fundamentos, para quem deseja aprofundar o caminhar na tradição.</p>
-      </article>
-      <article class="card" id="orientacao">
-        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 L14.2 9.8 L22 12 L14.2 14.2 L12 22 L9.8 14.2 L2 12 L9.8 9.8 Z" stroke="currentColor" stroke-width="1.2"/></svg>
-        <h3>Orientação Espiritual</h3>
-        <p>Um espaço de escuta e orientação diante das questões apresentadas pelo consulente.</p>
-      </article>
-    </div>
-  </section>
-
-  <section class="section padilha-teaser" id="padilha">
-    <div class="wrap pt-inner">
-      <div class="pt-text">
-        <span class="eyebrow">Pombagira da casa</span>
-        <h2>Maria Padilha</h2>
-        <p>"Chegou meia-noite... e Padilha chegou." Força, proteção e abertura de caminhos — conheça a Pombagira que atua na casa de Pai Gil D'Oxaguiã.</p>
-        <a class="pt-btn" href="maria-padilha-final.html">Conheça Maria Padilha →</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section atendimento" id="atendimento">
-    <div class="wrap">
-      <span class="eyebrow">Fale comigo</span>
-      <h2>Agende sua consulta</h2>
-      <p>Atendimentos presenciais e à distância, mediante agendamento. Escreva pelo WhatsApp ou Instagram para saber mais sobre horários e valores.</p>
-      <div class="cta-row">
-        <a class="btn solid" href="#">WhatsApp</a>
-        <a class="btn" href="#">Instagram</a>
-      </div>
-    </div>
-  </section>
-
 </main>
-
 <footer>
   <span>Pai Gil D'Oxaguiã</span>
   <span>Tradição • Fé • Sabedoria • Equilíbrio</span>
 </footer>
-
 </body>
 </html>
